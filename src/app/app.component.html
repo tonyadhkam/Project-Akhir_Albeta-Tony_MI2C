@@ -1,0 +1,13 @@
+<app-header-at (featureSelected)="onNavigate($event)"></app-header-at>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <!-- <app-home *ngIf="loadedFeature === 'home'"></app-home>
+            <app-band *ngIf="loadedFeature === 'band'"></app-band>
+            <app-event *ngIf="loadedFeature === 'event'"></app-event> -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+<app-footer-at></app-footer-at>
+

@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-contact-edit></app-contact-edit>
+    <hr>
+    <ul class="list-group">
+      <a class="list-group-item" style="cursor:pointer"
+      *ngFor="let kritik of kritiks; let i = index"
+      (click)="onEditSaran(i)"
+      >
+      {{kritik.name}} - {{kritik.saran}}
+    </a>
+    </ul>
+  </div>
+</div>

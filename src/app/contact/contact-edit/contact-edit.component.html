@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-sm-3 form-group">
+          <label for="name">Name</label>
+          <input type="text"
+           id="name" 
+           class="form-control"
+           name="name"
+           ngModel
+           required
+           >
+        </div>
+        <div class="col-sm-5">
+            <label for="saran">Saran</label>
+            <textarea type="textarea"
+             id="saran" 
+             class="form-control"
+             name="saran"
+             rows="4"
+             ngModel
+             required 
+             ></textarea>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="submit" 
+          class="btn btn-success" [disabled]="!f.valid">{{ editMode ? 'Update' : 'Send' }}</button> &nbsp;
+          <button type="button" 
+          class="btn btn-danger" 
+          (click)="onDelete()"
+          *ngIf="editMode">Delete</button> &nbsp;
+          <button type="button" class="btn btn-primary" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

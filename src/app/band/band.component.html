@@ -1,0 +1,16 @@
+<h1 style="text-align:center; font-family: Ultras Liberi">DAFTAR BAND</h1>
+<br>
+<div class="row">
+  <div class="col-sm-5">
+    <app-band-list></app-band-list>
+  </div>
+  <div class="col-sm-7">
+  <app-band-detail
+  *ngIf="selectedBand;else infotext"
+  [band]="selectedBand"></app-band-detail>
+  <ng-template #infotext>
+    <h3> Please Select Info Band </h3> 
+  </ng-template>
+  <!-- <router-outlet></router-outlet> -->
+</div>
+</div>
